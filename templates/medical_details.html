@@ -1,0 +1,53 @@
+{% extends "navbar.html" %}
+{% block content %}
+<link rel="stylesheet" href="../static/coronacarecss.css">
+<style>
+.jumbotron{
+max-width:700px;
+margin:auto;
+}
+
+
+</style>
+
+<div class="jumbotron">
+    <h3 class="display-5" style="text-align:center">ENTER YOUR DETAILS</h3>
+    <h7 style="text-align:center" class="form-text text-muted">Fill out this form</h7>
+
+
+    <form method="post">
+
+        <hr class="my-4">
+        <h5 class="lead container"><strong>MEDICAL DETAILS</strong></h5><br>
+        <div class="row">
+
+            <div class="column ">
+                &emsp;&emsp;&emsp;<label for="temp">&emsp;&emsp;Temperature:</label>
+                &emsp;<input class="lead" type="number" id="temp" name="temp" value="" placeholder="Temperature">
+                <br><br>
+                &emsp;&emsp;&emsp;<label for="oxymeter">Oximeter Reading:</label>
+                &emsp;<input class="lead" type="number" id="oxymeter" name="oxymeter" value=""
+                             placeholder="Oxymeter Reading">
+                <br><br>
+
+
+                &emsp;&emsp;&emsp;&emsp;<label for="spiro_fec">Spirometry (FEV1):</label>
+                &emsp;<input class="lead" type="number" id="spiro_fec" name="spiro_fec" value=" "
+                             placeholder="Spirometry FEC"/>
+                <br><br>
+                &emsp;&emsp;&emsp;&emsp;<label for="spiro_fvc">Spirometry (FVC):</label>
+                &emsp;<input class="lead" type="number" id="spiro_fvc" name="spiro_fvc" value=""
+                             placeholder="Spirometry FVC"/>
+
+
+                <br><br>
+                <p>
+                    <input class="btn btn-danger btn-lg" onclick="window.open('http://127.0.0.1:5000/menu_for_forms_positive');"
+                           type="submit" value="Submit & Proceed"/>
+                </p>
+            </div>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "navbar.html" %}
+{% block content %}
+<link rel="stylesheet" href="../static/coronacarecss.css">
+<style>
+.jumbotron{
+max-width:700px;
+margin:auto;
+text-align :left;
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input {
+  display: inline-block;
+  float: left;
+}
+}
+
+</style>
+
+<form method="POST">
+    <div class="jumbotron">
+
+        <h3 class="display-5" style="text-align:center">ENTER YOUR DETAILS</h3>
+        <h7 style="text-align:center" class="form-text text-muted">Fill out this form</h7>
+        <hr class="my-4">
+
+        <h5 class="lead container"><strong>&emsp;&emsp;&emsp;GENERAL DETAILS</strong></h5><br>
+        <div class="row">
+
+            <div class="column">
+                <label class="display-7" for="name">Name:</label>
+               &emsp;&emsp;&emsp;&emsp;&emsp; <input class="lead" type="text" id="name" name="name" value="" placeholder="Enter Your Name" >
+                <br><br>
+                <label class="display-7" for="age">Age:</label>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input class="lead" type="number" id="age" name="age" value="" placeholder="Enter Your Age">
+                <br><br>
+                <label class="display-7" for="gender">Gender:</label>
+                &emsp;&emsp;&emsp;&emsp;&emsp;<input class="lead" type="text" id="gender" name="gender" value=""
+                             placeholder="Enter Your Gender">
+                <br><br>
+                <label class="display-7" for="phno">Phone Number:</label>
+                &emsp;&emsp;<input class="lead" type="tel" id="phno" name="phno" value="" placeholder="Enter Phno">
+                <br><br>
+                <label for="address">Address:</label>
+                &emsp;&emsp;&emsp;&emsp;&emsp;<input class="lead" type="text" id="address" name="address" value=""
+                             placeholder="Enter Your Address">
+                <br><br>
+                <label for="adhaar">Adhaar Number:</label>
+                &emsp;<input class="lead" type="text" id="adhaar" name="adhaar" value=""
+                             placeholder="Enter Your Adhaar Number">
+
+                <br><br><br>
+
+
+                <p class="lead">
+                    <input class="btn btn-danger btn-lg"
+                           onclick="window.open('http://127.0.0.1:5000/menu_for_forms_negative');" type="submit"
+                           value="Submit & Proceed">
+
+                </p>
+
+            </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

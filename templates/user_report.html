@@ -1,0 +1,2196 @@
+{% extends "navbar.html" %}
+{% block content %}
+<link rel="stylesheet" href="../static/coronacarecss.css">
+<style>
+
+.jumbotron {
+
+    max-width: 700px;
+    margin: auto;
+}
+
+
+
+</style>
+
+
+<head>
+    <title>A.T.A.C</title>
+</head>
+<body>
+<div class="jumbotron">
+    <h3 class="display-5" style="text-align:center">Report</h3>
+    <!--    <h5>&ensp;&ensp;Unique code : </h5>-->
+    <!--    <h5>&ensp;&ensp;General Information :</h5>-->
+    <br>
+    <div class="row" ,align="left">
+        <h5>Unique code : {{ gen_det[1] }} </h5>
+    </div>
+    <div class="row" ,align="left">
+        <h5>General Information :</h5>
+
+    </div>
+
+    <div class="row" ,align="left">
+        <div class="col-4" ,align="left">
+            <p>Name : {{ gen_det[2] }}</p><br>
+            <p>Age : {{ gen_det[3] }}</p><br>
+            <p>Gender : {{ gen_det[4] }}</p><br>
+        </div>
+        <div class="col-6" ,align="left">
+            <p>Phone Number : {{ gen_det[5] }} </p><br>
+            <p>Address : {{ gen_det[6] }} </p><br>
+            <p>Adhaar Number : {{ gen_det[7] }}</p><br>
+        </div>
+    </div>
+    <br><br>
+    <h5>Medical Information :</h5>
+    <div class="row">
+        <div class="col-4">
+            <br>
+            <p>Temperature : {{ med_det[1] }}</p><br>
+            <p>Oximeter Reading : {{ med_det[2] }}</p><br>
+            <p>FEV : {{ med_det[3] }}</p><br>
+            <p>FVC : {{ med_det[4] }}</p><br>
+        </div>
+        <div class="col-6">
+            <div>
+                <br>
+                <p>Chest X-Ray : </p><br>
+                <p>
+                <img class="img-responsive center-block paddingImg" src="../images/unique_code.jpeg" alt="xray"
+                     width="300" height="300"/></p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <p align=left>
+        <!--        OOOON-->
+        {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 0 and
+        output_det[0][-1] == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area. <br>
+        There is nothing to worry about.<br>
+        Staying in home quarantine should be fine : )
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+    <h5>Result : </h5><br>
+    <p>No symptoms of corona </p>
+    {% endif %}
+
+    <!--0000P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area. <br>
+        You do not have any serious symptoms and therefore have a very mild case of the coronavirus. <br>
+        There is nothing to worry about.<br>
+        Staying in home quarantine should be fine : )
+
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>No symptoms of corona</p>
+    {% endif %}
+    <!--0001N-->
+
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Stay at home and monitor your conditions regularly :)
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>No symptoms of coronavirus is found. Approach nearest medical center in case of feeling discomfort.</p>
+
+    {% endif %}
+    <!--0001P-->
+
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Stay at home and monitor your conditions regularly :)
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>No symptoms of coronavirus is found. Approach nearest medical center in case of feeling discomfort.</p>
+
+    {% endif %}
+    <!--0010N-->
+
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is good and spirometer reading is mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        Stay at home and monitor your conditions regularly :)
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>No symptoms of coronavirus is found. Approach nearest medical center in case of feeling discomfort.</p>
+    {% endif %}
+
+    <!--0010P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is good and spirometer reading is mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do not have any serious symptoms but is a moderate case of corona.<br>
+        Try approaching the nearest medical camp in your locality :)
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Very mild case.</p>
+    {% endif %}
+
+    <!--0011N-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is good and spirometer reading is mild.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be moderate,try consulting your nearest medical camp:)</b></p>
+    {% endif %}
+
+    <!--0011P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is good and spirometer reading is mild.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        You do not have any serious symptoms but is a moderate case of corona.<br>
+        Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate condition</b></p>
+    {% endif %}
+
+
+    <!--0020N-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br> Your
+        oximeter reading is promisingly good and your spirometer reading is moderate.<br> The chest X-Ray shows that
+        there are no fluids filled in the lungs area .
+        <br>You do not have any serious symptoms. <br>Try having nutritious fruits and veggies, that will really help to
+        stay healthy and it will protect you from corona .
+        <br>Staying in home will help you to stay away from corona:)
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your corona report seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+    <!--0020P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br> Your
+        oximeter reading is promisingly good and your spirometer reading is moderate.<br> The chest X-Ray shows that
+        there are no fluids filled in the lungs area .
+        <br>You do not have any serious symptoms and but it is a moderate case of corona. <br>Try having nutritious
+        fruits and veggies, that will really help to stay healthy and it will protect you from corona .
+        <br>Staying in home will help you to stay away from corona:)
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate condition.</b></p>
+    {% endif %}
+
+    <!--0021P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br> Your
+        oximeter reading is promisingly good and your spirometer reading is modeate.<br> The chest X-Ray shows that
+        there are small amount of fluids filled in the lungs area .
+        <br>You do not have any serious symptoms. <br>Try approaching the nearest medical camp.
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your corona report seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+    <!--0021P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br> Your
+        oximeter reading is promisingly good and your spirometer reading is modeate.<br> The chest X-Ray shows that
+        there are small amount of fluids filled in the lungs area .
+        <br>You do not have any serious symptoms but is a moderate case of corona. <br>Try approaching the nearest
+        medical camp.
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate Condition</b></p>
+    {% endif %}
+
+
+    <!--0030N-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is promisingly good.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area. <br>
+        You do seem to have mild symptoms. <br>
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>You are advised to take rest and visit a medical camp or a hospital</b></p>
+    {% endif %}
+
+    <!--0030P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is promisingly good.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area. <br>
+        You do seem to have mild symptoms and therefore have a very moderate case of the coronavirus. <br>
+        Go visit your nearest Covid-19 hospital
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate Condition</b></p>
+    {% endif %}
+
+    <!--0031N-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 3 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is promisingly good.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are some amount of fluid filled in the lungs area. <br>
+        You do seem to have mild symptoms <br>
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>You are advised to take rest and visit your nearest medical camp or a hospital as soon as possible</b></p>
+    {% endif %}
+
+    <!--0031P-->
+    {% if output_det[1] == 0 and output_det[2] == 0 and output_det[3] == 3 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is promisingly good.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are some amount of fluid filled in the lungs area. <br>
+        You do seem to have mild symptoms and therefore have a very moderate case of the coronavirus. <br>
+        Go visit your nearest Covid-19 hospital
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate Condition</b></p>
+    {% endif %}
+
+    <!--0100N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 0 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings is mild and spirometer reading is promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality.
+
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your corona report seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+    <!--0100P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 0 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings is mild and spirometer reading is promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        You do not have any serious symptoms <br>
+        Staying in home quarantine should be fine : )
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Very mild condition.</b></p>
+    {% endif %}
+    <!--0101N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is mild and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality.
+
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your corona report seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+    <!--0101P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is mild and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        You do not have any serious symptoms but is a moderate case of corona.<br>
+        Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Very mild condition</b></p>
+    {% endif %}
+
+    <!--0110N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading are mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+
+    <!--0110P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading are mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do not have any serious symptoms but is a moderate case of corona.<br>
+        Try approaching the nearest medical camp in your locality. )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Very mild case.</b></p>
+    {% endif %}
+
+    <!--0111N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading mild.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality. )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+    <!--0111P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter readings and spirometer reading mild.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Symptoms of corona are observed<br>
+        Try approaching the nearest medical camp in your locality : )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate condition.</b></p>
+    {% endif %}
+
+
+    <!--0120N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br> Your
+        oximeter reading is mild and your spirometer reading is modeate.<br> The chest X-Ray shows that there are no
+        fluids filled in the lungs area.
+        <br>You do not have any serious symptoms. <br>Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your corona report seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+
+    <!--0120P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is mild and your spirometer reading is modeate.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do not have any serious symptoms but is a moderate case of corona. <br>
+        Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate Condition.</b></p>
+    {% endif %}
+
+
+    <!--0121N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br> Your
+        oximeter reading is mild and your spirometer reading is modeate.<br> The chest X-Ray shows that there are some
+        amount of fluids in your lungs area.
+        <br>Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be bit critical,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+
+    <!--0121P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br> Your
+        oximeter reading is mild and your spirometer reading is modeate.<br> The chest X-Ray shows that there are some
+        amount of fluids in your lungs area.
+        <br>It is a critical case of corona. <br>Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Critical conditon</b></p>
+    {% endif %}
+
+
+    <!--0130N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area. <br>
+        You do seem to have mild symptoms.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>You are advised to take rest and visit your nearest medical camp or a hospital as soon as possible</b></p>
+    {% endif %}
+
+
+    <!--0130P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        >Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area. <br>
+        You do seem to have mild symptoms and therefore have a very moderate case of the coronavirus. <br>
+        Go visit your nearest Covid-19 hospital
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate Condition</b></p>
+    {% endif %}
+
+
+    <!--0131N-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 3 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area. <br>
+        You do seem to show most symptoms. <br>
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Critical condition<br>
+        Avoid Contact with others <br>
+        Make sure to inform people who had close contact with you to get tested <br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately</b></p>
+    {% endif %}
+
+    <!--0131P-->
+    {% if output_det[1] == 0 and output_det[2] == 1 and output_det[3] == 3 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is stable and perfect.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area. <br>
+        You do seem to show most symptoms and therefore have a very critical case of the coronavirus. <br>
+        Avoid Contact with others <br>
+        Make sure to inform people who had close contact with you to get tested <br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Critical condition</b></p>
+    {% endif %}
+
+
+    <!--1000N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        Staying in home quarantine should be fine : )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems fine, however, there is a slightly high temperature.</b></p>
+    {% endif %}
+
+    <!--1000P-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do not have any serious symptoms <br>
+        Staying in home quarantine should be fine : )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>No symptoms of corona.</b></p>
+    {% endif %}
+
+
+    <!--1001N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality. )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be mild, try staying at home and consult doctor if situation worsens.</b></p>
+    {% endif %}
+
+    <!--1001P-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter readings and spirometer reading are promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        You do not have any serious symptoms but is a moderate case of corona.<br>
+        Try approaching the nearest medical camp in your locality. )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Very mild condition</b></p>
+    {% endif %}
+
+    <!--1010N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is good and spirometer reading is mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality. )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be mild, try staying at home and consult doctor if situation worsens.</b></p>
+    {% endif %}
+
+
+    <!--1010P-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is good and spirometer reading is mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do not have any serious symptoms and therefore have a very mild case of the coronavirus.<br>
+        Try approaching the nearest medical camp in your locality. )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Very mild condition</b></p>
+    {% endif %}
+
+    <!--1011N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is good and spirometer reading is moderate.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality. : )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be moderate,try consulting your nearest medical camp:).</b></p>
+    {% endif %}
+
+    <!--1011P-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is good and spirometer reading is moderate.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Symptoms of corona are observed<br>
+        Try approaching the nearest medical camp in your locality.: )
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate condition</b></p>
+    {% endif %}
+
+    <!--1020N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br> Your oximeter
+        reading is promisingly good and your spirometer reading is modeate.<br> The chest X-Ray shows that there are no
+        fluids filled in the lungs area.
+        <br>Try approaching the nearest medical camp in your locality.
+    </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your Condition seems to be moderate,try consulting your nearest medical camp:)</b></p>
+    {% endif %}
+
+
+    <!--1020P-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br> Your oximeter
+        reading is promisingly good and your spirometer reading is modeate.<br> The chest X-Ray shows that there are no
+        fluids filled in the lungs area.
+        <br>You do not have any serious symptoms but is a moderate case of corona. <br>Try approaching the nearest
+        medical camp in your locality. </p>
+
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate Condition</b></p>
+    {% endif %}
+
+    <!--1021N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br> Your oximeter
+        reading is promisingly good and your spirometer reading is modeate.<br> The chest X-Ray shows that there are
+        some amount of fluids filled in the lungs area.
+        <br>Try approaching the nearest medical camp in your locality.
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Your condition seems to be moderate,try consulting the doctor as soon as possible:)</b></p>
+    {% endif %}
+
+
+    <!--1021P-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br> Your oximeter
+        reading is promisingly good and your spirometer reading is modeate.<br> The chest X-Ray shows that there are
+        some amount of fluids filled in the lungs area.
+        <br>It is a bit critical case of corona. <br>Try approaching the nearest medical camp in your locality.
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Critical condition.</b></p>
+    {% endif %}
+
+
+    <!--1030N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br> Your oximeter
+        reading is promisingly good and your spirometer reading is modeate.<br> The chest X-Ray shows that there are
+        some amount of fluids filled in the lungs area.
+        <br>It is a bit critical case of corona. <br>Try approaching the nearest medical camp in your locality.
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Critical condition.</b></p>
+    {% endif %}
+
+    <!--1030P-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is mild.<br>
+        Your oximeter reading is promisingly good.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area. <br>
+        You do seem to have mild symptoms and therefore have a very moderate case of the coronavirus. <br>
+        Go visit your nearest Covid-19 hospital
+    <h5>Precautions : </h5><br>
+    <ul>
+
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Moderate Condition</b></p>
+    {% endif %}
+
+
+    <!--1031N-->
+    {% if output_det[1] == 1 and output_det[2] == 0 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+    <h5>Medical Condition Details : </h5><br>
+    <p align=left>
+        Based on the results obtained from the above performed tests, your temperature is mild.<br>
+        Your oximeter reading is good and clear.<br>
+        Your spirometer reading is however critical <br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area. <br>
+        You do seem to show most symptoms.
+    <h5>Precautions : </h5><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p><b>Avoid Contact with others <br>
+        Make sure to inform people who had close contact with you to get tested <br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately</b></p>
+    {% endif %}
+
+
+    <!--1031P-->
+    {% if output_det[1] == 1 and output_det[1] == 0 and output_det[3] == 3 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is mild.<br>
+        Your oximeter reading is good and clear.<br>
+        Your spirometer reading is however critical.<br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area.<br>
+        You do seem to show most symptoms and therefore have a very critical case of the coronavirus.<br>
+        Avoid Contact with others.<br>
+        Make sure to inform people who had close contact with you to get tested.<br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Critical Case.</p>
+
+    {% endif %}
+    <!--1100N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 0 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is mild and spirometer reading is promisingly good.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        Staying in home quarantine should be fine.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Your corona report seems to be mild, try staying at home and consult doctor if situation worsens.</p>
+    {% endif %}
+    <!--1100P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 0 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is mild and spirometer reading is promisingly good.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do not have any serious symptoms of coronavirus.<br>
+        Staying in home quarantine should be fine.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Very mild case.</p>
+    {% endif %}
+    <!--1101N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is mild and spirometer reading is promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Your corona report seems to be moderate,try consulting your nearest medical camp.</p>
+    {% endif %}
+    <!--1101P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 0 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading is mild and spirometer reading is promisingly good.<br>
+        The chest X-Ray shows that there are some fluids filled in the lungs area.<br>
+        You do not have any serious symptoms and therefore have a very mild case of the coronavirus.<br>
+        Try approaching the nearest medical camp in your locality.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Very mild case.</p>
+    {% endif %}
+    <!--1110N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading and spirometer reading are mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality. <br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Your corona report seems to be moderate,try consulting your nearest medical camp.</p>
+    {% endif %}
+    <!--1110P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 1 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is a bit high.<br>
+        Your oximeter reading and spirometer reading are mild.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do not have any serious symptoms and therefore have a very mild case of the coronavirus.<br>
+        Try approaching the nearest medical camp in your locality. <br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Very mild case.</p>
+    {% endif %}
+    <!--1111N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is high.<br>
+        Your oximeter reading and spirometer reading are also not up to the mark.<br>
+        The chest X-Ray shows that there are  fluids filled in the lungs area.<br>
+        You have symptoms of corona<br>
+        please get yourself admitted in a healthcare centre as soon as possible.<br>
+
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Your condition seems to be pretty critical,try admitting yourself to the  nearest medical camp as soon as possible.</p>
+    {% endif %}
+    <!--1111P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 1 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is a very high.<br>
+        Your oximeter reading and spirometer reading are also not up to the mark.<br>
+        The chest X-Ray shows that there are  fluids filled in the lungs area.<br>
+        <br> your condition is critical
+
+
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>critical case.</p>
+    {% endif %}
+    <!--1120N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br>
+        Your oximeter reading is mild and your spirometer reading is moderate.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality. <br>
+
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Your corona report seems to be bit critical,try approaching your nearest medical camp at the earliest.</p>
+
+    {% endif %}
+    <!--1120P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 2 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br>
+        Your oximeter reading is mild and your spirometer reading is moderate.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        It is a bit critical case of corona.<br>
+        Try approaching the nearest medical camp in your locality.<br>
+
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Critical case.</p>
+
+    {% endif %}
+    <!--1121N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br>
+        Your oximeter reading is mild and your spirometer reading is moderate.<br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area.<br>
+        Try approaching the nearest medical camp in your locality as soon as possible. <br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Your corona report seems to be bit critical,try consulting the nearest medical camp in your locality at the
+        earliest.</p>
+    {% endif %}
+    <!--1121P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 2 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is bit high.<br>
+        Your oximeter reading is mild and your spirometer reading is moderate.<br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area.<br>
+        It is a critical case of corona.<br>
+        Try approaching the nearest medical camp in your locality as soon as possible.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Critical case.</p>
+    {% endif %}
+
+    <!--1130N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'N' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is mild.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do seem to show most symptoms.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Avoid Contact with others.<br>
+        Make sure to inform people who had close contact with you to get tested.<br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately</p>
+
+    {% endif %}
+    <!--1130P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 3 and output_det[4] == 0 and output_det[0][-1]
+    == 'P' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is mild.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical.<br>
+        The chest X-Ray shows that there are no fluids filled in the lungs area.<br>
+        You do seem to show most symptoms and therefore have a very critical case of the coronavirus.<br>
+        Avoid Contact with others.<br>
+        Make sure to inform people who had close contact with you to get tested.<br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Critical Case</p>
+    {% endif %}
+
+    <!--1131N-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 3 and output_det[4] == 1 and output_det[0][-1]
+    == 'N' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is mild.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical.<br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area.<br>
+        You do seem to show most symptoms.<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Avoid Contact with others<br>
+        Make sure to inform people who had close contact with you to get tested.<br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately.</p>
+
+    {% endif %}
+
+    <!--1131P-->
+    {% if output_det[1] == 1 and output_det[1] == 1 and output_det[3] == 3 and output_det[4] == 1 and output_det[0][-1]
+    == 'P' -%}
+
+
+    <h3>Medical Condition Details : </h3><br>
+    <p>
+        Based on the results obtained from the above performed tests, your temperature is mild.<br>
+        Your oximeter reading is mild.<br>
+        Your spirometer reading is however critical<br>
+        The chest X-Ray shows that there are some amount of fluids filled in the lungs area.<br>
+        You do seem to show most symptoms and therefore have a very critical case of the coronavirus.<br>
+        Avoid Contact with others<br>
+        Make sure to inform people who had close contact with you to get tested<br>
+        Isolate yourself and Go visit your nearest Covid-19 hospital immediately<br>
+    </p>
+
+    <h3>Precautions : </h3><br>
+    <ul>
+        <li>Practice self quarantine</li>
+        <li>Avoid contact with people</li>
+        <li>Wearing a mask is a must.</li>
+        <li>Cover your cough or sneeze with a tissue , then throw the tissue in the trash and wash your hands.</li>
+        <li>Intake of three healthy meals every day.</li>
+        <li>Keep sanitizing your hands</li>
+        <li>Keep monitoring your symptoms and do e-consult your doctor if in case of any abnormalities in your
+            condition.
+        </li>
+        <li>Get plenty of rest</li>
+        <li>Drink fluids.</li>
+
+    </ul>
+
+    <h3>Result :</h3>
+    <p>Moderate condition</p>
+    {% endif %}
+
+
+    <!--        {% if output_det[1] == 1 and output_det[2] == 0 -%}-->
+    <!--            although you body temperature seems high , your oximeter readings look fine . you might not be having a severe condition-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[1] == 0 and output_det[2] == 0 -%}-->
+    <!--            your body temperature and oximeter readings seem fine .-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[2] == 1 and output_det[3] == 1 -%}-->
+    <!--            your spirometer ratio readings also seem lower than usual .-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[2] == 0 and output_det[3] == 1 -%}-->
+    <!--            your spirometer readings seem lower than usual .-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[2] == 1 and output_det[3] == 0 -%}-->
+    <!--            your spirometer readings seem alright .-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[2] == 0 and output_det[3] == 0 -%}-->
+    <!--            your spirometer readings seem alright , no problems detected.-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[3] == 0 and output_det[4] == 0 -%}-->
+    <!--            your x ray readings are perfect . nothing to worry about-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[3] == 0 and output_det[4] == 1 -%}-->
+    <!--            your x ray results show a bit of a pneumonic condition , we suggest you to check in with a doctor  for further analysis.-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[3] == 1 and output_det[4] == 1 -%}-->
+    <!--            you seem to be having quite a severe case . your x ray reports show a high pneumonic condition in the lungs .we recommend you to admit yourself in a hospital in your locality as soon as possible .-->
+    <!--        {% endif %}-->
+    <!--        {% if output_det[3] == 1 and output_det[4] == 0 -%}-->
+    <!--            although your spirometer ratios were pretty low , your xray depicts that your Lungs are at a good condition . However you must take caution and take care .-->
+    <!--        {% endif %}-->
+
+
+    </p>
+
+</div>
+{% endblock %}

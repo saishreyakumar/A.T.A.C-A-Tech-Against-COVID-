@@ -1,0 +1,83 @@
+{% extends "navbar.html" %}
+{% block content %}
+<link rel="stylesheet" href="../static/coronacarecss.css">
+<br>
+<h1 style="text-align:center;">Treatments for COVID-19</h1>
+		<p style="text-align:center"> People with COVID-19 should receive supportive care to help relieve symptoms.</p>
+		<p style="text-align:center">There is no specific antiviral treatment recommended for COVID-19.</p>
+		<br>
+		<div id="treatments">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <strong>Self Care </strong>(If you have possible or confirmed COVID-19):
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#treatments">
+      <div class="card-body">
+		<ul>
+			<li>Stay home except to get medical care.</li>
+			<li>Monitor your symptoms carefully. If your symptoms get worse, call your healthcare provider immediately.</li>
+			<li>Get rest and stay hydrated. Take over-the-counter medicines, such as acetaminophen, to help you feel better.</li>
+			<li>If you have a medical appointment, notify your healthcare provider ahead of time that you have or may have COVID-19.</li>
+			<li>Stay in a specific room and away from other people in your home. If possible, use a separate bathroom. If you must be around others, wear a facemask</li>
+			<li>Observe how you are feeling and what you are thinking, without judgment.</li>
+			<li>Instead of responding or reacting to those thoughts or feelings, note them, and then let them go.</li>
+		</ul>
+	  </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Medical Treatments
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#Treatments">
+      <div class="card-body">
+		<ul>
+			<li> Stay in touch with your doctor. Call before you get medical care.</li>
+			<li>Your local health authorities may give instructions on checking your symptoms and reporting information.</li>
+		</ul>
+        
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          If someone is showing any of these signs, seek emergency medical care immediately:
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#Treatments">
+      <div class="card-body">
+		<ul>
+			<li>Trouble breathing</li>
+			<li>Persistent pain or pressure in the chest</li>
+			<li>New confusion</li>
+			<li>Inability to wake or stay awake</li>
+			<li>Bluish lips or face</li>
+		</ul>      
+      </div>
+    </div>
+	<button class="btn btn-link collapsed btn-danger">Call your medical provider for any other symptoms that are severe or concerning to you.</button>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+		
+{% endblock %}
+

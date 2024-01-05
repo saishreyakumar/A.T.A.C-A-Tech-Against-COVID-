@@ -1,0 +1,47 @@
+{% extends "navbar.html" %}
+{% block content %}
+<link rel="stylesheet" href="../static/coronacarecss.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+	html,
+	body {
+		height: 100%;
+	}
+
+	img.one {
+		height: auto;
+		width: auto;
+	}
+
+	img.two {
+		height: 50%;
+		width: 50%;
+	}
+</style>
+
+<br><br><br><br>
+<div class="w3-show-inline-block">
+	<div class="w3-bar">
+		&emsp;&emsp;&emsp;&emsp;&emsp;
+		&emsp;&emsp;&emsp;&emsp;&emsp;
+		&emsp;&emsp;&emsp;&emsp;<a class="btn btn-danger btn-lg" href="{{url_for('menu_for_forms_positive')}}" role="button "style ="width : 400px ;height:50px;">Are you Corona
+			positive?</a>
+	</div>
+</div>
+<img class="img-responsive center-block paddingImg" src="{{ url_for('static', filename='logo (1).png') }}" alt="logo.png"
+	width="300" height="300">
+
+<div class="w3-show-inline-block">
+	<div class="w3-bar">
+		<a class="btn btn-danger btn-lg" href="{{url_for('menu_for_forms_negative')}}" role="button" style ="width : 400px ;height:50px;">Do you want to take the
+			Covid test?</a>
+
+	</div>
+</div>
+
+{% endblock %}
+
+
+	
+		

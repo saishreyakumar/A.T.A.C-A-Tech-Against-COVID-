@@ -1,0 +1,111 @@
+{% extends "navbar.html" %}
+{% block content %}
+<link rel="stylesheet" href="../static/coronacarecss.css">
+		<h1 style="text-align:center;">Coping with COVID-19</h1>
+		<br>
+		<h3 style="text-align:center"> Be kind to your mind</h3>
+		<br>
+		<p style="text-align:center"> Mental health problems are common. Here are ways to cope with stress and promote wellbeing.</p>
+		<br>
+		<div id="mentalhealth">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Pause. Breathe. Notice how you feel.
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#mentalhealth">
+      <div class="card-body">
+		<ul>
+			<li>Take slow deep breaths, stretch, or meditate.</li>
+			<li>Observe how you are feeling and what you are thinking, without judgment.</li>
+			<li> Instead of responding or reacting to those thoughts or feelings, note them, and then let them go.</li>
+			<li><a href="https://www.mindful.org/how-to-meditate/">Meditation: In Depth</a>
+		</ul>
+	  </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Take breaks from upsetting content
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#mentalhealth">
+      <div class="card-body">
+		<ul>
+			<li> Make time to unwind.</li>
+			<li>  Try relaxation techniques and listening to music.</li>
+			<li>  Try to do some other activities you enjoy.</li>
+		</ul>
+        
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Take care of your body
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+		<ul>
+			<li><strong>Exercise regularly.</strong> Even one session of moderate-to-vigorous physical activity reduces anxiety, and even short bouts of physical activity are beneficial..</li>
+			<a href="https://www.takingcharge.csh.umn.edu/what-physical-activity-fitness">Basics of Physical Activities</a>
+			<li><strong>Get plenty of sleep.</strong> Be consistent. Go to bed at the same time each night and get up at the same time each morning, including on the weekends..</li>
+			<a href="https://www.healthline.com/nutrition/17-tips-to-sleep-better">Tips for better sleep</a>
+			<li><strong>Try to eat healthy, well-balanced meals.</strong> Add healthy fats, cut sodium, bump up your fiber, and aim for a variety of colors on your plate..</li>
+			<a href="https://www.healthline.com/nutrition/healthy-eating-tips">Healthy eating tips</a>
+		</ul>      
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Reach out and stay connected
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#mentalhealth">
+      <div class="card-body">
+		<ul>
+			<li>Talk with people you trust about your concerns and how you are feeling..</li>
+			<li>Check in with your loved ones often.</li>
+			<li>It can help you and your loved ones feel less lonely and isolated.</li>
+		</ul>
+        
+      </div>
+    </div>
+  </div>
+   <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed btn-danger" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Seek help if overwhelmed or unsafe
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#mentalhealth">
+      <div class="card-body">
+		<ul>
+			<li>If you, or someone you care about, are feeling overwhelmed with emotions like sadness, depression, or anxiety, or feel like you want to harm yourself or others, seek professional help.</li>
+			<li>If distress impacts activities of your daily life for several days or weeks, talk to a clergy member, counselor, or healthcare provider.</li>
+		</ul>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}	

@@ -1,0 +1,19 @@
+{% extends "navbar.html" %}
+{% block content %}
+<style>
+  .jumbotron{
+max-width:700px;
+margin:auto;
+}
+</style>
+<link rel="stylesheet" href="../static/coronacarecss.css">
+<br>
+<div class="jumbotron">
+<h4 class="lead container">Chest Xray Upload</h4>
+<form id="upload-form" method="post" enctype="multipart/form-data">
+  <br>
+    <input class="lead" type="file" name="file" accept="image/*"/>
+      <input class="btn btn-danger btn-lg" onclick="window.open('http://127.0.0.1:5000/menu_for_forms_positive');" type="submit" value="Submit & Proceed">
+</form>
+</div>
+{% endblock %}
